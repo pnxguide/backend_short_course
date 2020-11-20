@@ -3,6 +3,8 @@
 
 **By Yuttapichai Kerdcharoen**
 
+![GitHub Logo](/banner.jpg)
+Format: ![Alt Text](url)
 
 ## Contents
 **Day 1**
@@ -19,6 +21,6 @@
 * API Development using Go and MariaDB
 * API Testing and Documentation
 * Session Management
-* Introduction to Web Application Security *Optional*
-* Cloud Computing Basics *Optional*
-* Introduction to Virtualization *Optional*
+* Introduction to Web Application Security *(Optional)*
+* Cloud Computing Basics *(Optional)*
+* Introduction to Virtualization *(Optional)*
