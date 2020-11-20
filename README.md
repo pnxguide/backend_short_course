@@ -4,7 +4,6 @@
 **By Yuttapichai Kerdcharoen**
 
 ![GitHub Logo](/banner.jpg)
-Format: ![Alt Text](url)
 
 ## Contents
 **Day 1**
