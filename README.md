@@ -1,15 +1,17 @@
 # The World of Back-end Development
-## By Yuttapichai Kerdcharoen
+**This session is supported by Computer Science Infinite Group (CSIG).**
+**By Yuttapichai Kerdcharoen**
+
 
 ## Contents
-### Day 1
+**Day 1**
 * Internet Fundamental
 * Introduction to Web Document
 * Go Programming Basics
 * The Big Pictures of Databases
 * Database Programming using Go
 
-### Day 2
+**Day 2**
 * Brief Overview of Software Architectural Patterns
 * Software Design Principles
 * Message Passing Paradigms
