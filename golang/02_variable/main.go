@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 type Shape interface {
 	Area() float64
@@ -16,7 +19,23 @@ func (r Rect) Area() float64 {
 }
 
 func (r Rect) Perim() float64 {
-	return 2 * r.width + 2 * r.height
+	return 2*r.width + 2*r.height
+}
+
+type Circle struct {
+	radius float64
+}
+
+func (c Circle) Area() float64 {
+	return math.Pi * c.radius * c.radius
+}
+
+func (c Circle) Perim() float64 {
+	return 2 * math.Pi * c.radius
+}
+
+func measure(s Shape) {
+	fmt.Println(s.Area(), s.Perim())
 }
 
 func main() {
@@ -57,5 +76,7 @@ func main() {
 	fmt.Println(ok)
 
 	myRect := Rect{width: 4, height: 6}
-	fmt.Println(myRect.Area(), myRect.Perim())
+	myCircle := Circle{5}
+	measure(myRect)
+	measure(myCircle)
 }
