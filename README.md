@@ -22,3 +22,6 @@
 * Introduction to Web Application Security *(Optional)*
 * Cloud Computing Basics *(Optional)*
 * Introduction to Virtualization *(Optional)*
+
+## Further Readings
+* TBA
