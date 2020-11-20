@@ -1,0 +1,9 @@
+db:
+  user: maria_dba
+  password: dbapassword
+  server: localhost
+  port: 3306
+  database: mydb
+
+server:
+  port: 4000
