@@ -1,6 +1,6 @@
 # The World of Back-end Development
 
-![GitHub Logo](/banner.jpg)
+![GitHub Logo](/bannernew.jpg)
 
 **This session is supported by Computer Science Infinite Group (CSIG).**
 
