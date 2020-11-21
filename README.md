@@ -4,6 +4,7 @@
 
 **This session is supported by Computer Science Infinite Group (CSIG).**
 
+
 ## Contents
 **Day 1**
 * Internet Fundamental
@@ -22,6 +23,7 @@
 * Introduction to Web Application Security *(Optional)*
 * Cloud Computing Basics *(Optional)*
 * Introduction to Virtualization *(Optional)*
+
 
 ## Further Readings
 * TBA
