@@ -5,7 +5,9 @@ import (
 	"../form"
 )
 
-func GetAllProducts() ([]form.Product, error) {
+type ProductModel struct{}
+
+func (pm ProductModel) ReadAll() ([]form.Product, error) {
 	conn, err := database.NewConnection()
 	if err != nil {
 		return nil, err

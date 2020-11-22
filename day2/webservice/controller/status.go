@@ -1,10 +1,11 @@
 package controller
 
 import (
-	"fmt"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
-func Ping(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Pong!")
+func Ping(c *gin.Context) {
+	c.String(http.StatusOK, "Pong!")
 }

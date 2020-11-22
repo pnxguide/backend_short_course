@@ -1,19 +1,23 @@
 package controller
 
 import (
-	"encoding/json"
 	"log"
 	"net/http"
 
 	"../model"
+	"github.com/gin-gonic/gin"
 )
 
-func GetAllProducts(w http.ResponseWriter, r *http.Request) {
-	products, err := model.GetAllProducts()
+type ProductController struct{}
+
+func (pc ProductController) ReadAll(c *gin.Context) {
+	productModel := model.ProductModel{}
+	products, err := productModel.ReadAll()
 	if err != nil {
 		log.Println(err)
+		c.Status(http.StatusInternalServerError)
+		return
 	}
 
-	json.NewEncoder(w).Encode(products)
-	// fmt.Fprintln(w, products)
+	c.JSON(http.StatusOK, products)
 }

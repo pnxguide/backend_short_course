@@ -1,19 +1,13 @@
 package main
 
 import (
-	"net/http"
-
 	"./config"
-	"./controller"
 	"./database"
+	"./server"
 )
 
 func main() {
 	config.Init()
 	database.Init()
-
-	http.HandleFunc("/ping", controller.Ping)
-	http.HandleFunc("/products", controller.GetAllProducts)
-
-	http.ListenAndServe("localhost:4000", nil)
+	server.Init()
 }
