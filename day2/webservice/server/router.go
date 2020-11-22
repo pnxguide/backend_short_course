@@ -12,6 +12,7 @@ func NewRouter() *gin.Engine {
 
 	productController := controller.ProductController{}
 	router.GET("/products", productController.ReadAll)
+	router.GET("/product", productController.Read)
 
 	return router
 }
