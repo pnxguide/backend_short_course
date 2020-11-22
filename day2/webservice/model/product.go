@@ -75,3 +75,29 @@ func (pm ProductModel) Read(id uint64) (form.Product, error) {
 
 	return form.Product{}, errors.New("no products belong to the id")
 }
+
+func (pm ProductModel) Add(id uint64,
+	name string,
+	quantity uint64,
+	price float64,
+	productTypeID uint64) error {
+	conn, err := database.NewConnection()
+	if err != nil {
+		return err
+	}
+	defer database.CloseConnection(conn)
+
+	rows, err := conn.Query(`
+		INSERT INTO products
+			(product_id, product_name, product_quantity,
+			product_price, product_product_type_id)
+		VALUES
+			(?, ?, ?, ?, ?);
+	`, id, name, quantity, price, productTypeID)
+	if err != nil {
+		return err
+	}
+	defer rows.Close()
+
+	return nil
+}

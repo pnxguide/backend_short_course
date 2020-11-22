@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
+	"../form"
 	"../model"
 	"github.com/gin-gonic/gin"
 )
@@ -41,4 +42,27 @@ func (pc ProductController) Read(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, product)
+}
+
+func (pc ProductController) Add(c *gin.Context) {
+	productModel := model.ProductModel{}
+
+	var request form.ProductRequest
+	err := c.BindJSON(&request)
+	if err != nil {
+		log.Println(err)
+		c.Status(http.StatusBadRequest)
+		return
+	}
+
+	err = productModel.Add(request.ProductID,
+		request.ProductName, request.ProductQuantity,
+		request.ProductPrice, request.ProductTypeID)
+	if err != nil {
+		log.Println(err)
+		c.Status(http.StatusInternalServerError)
+		return
+	}
+
+	c.Status(http.StatusOK)
 }
